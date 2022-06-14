@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Finance Mobile Application-UX/UI Design Screen One</title>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap'><link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="style 1.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="screen-1">
+  <img src="logo.png" height="300px" width="300px">
+    
+  
+  <div class="email">
+    <label for="email">Email Address</label>
+    <div class="sec-2">
+      <ion-icon name="mail-outline"></ion-icon>
+      <input type="email" name="email" id="email" placeholder="Username@gmail.com"/>
+    </div>
+  </div>
+  <div class="password">
+    <label for="password">Password</label>
+    <div class="sec-2">
+      <ion-icon name="lock-closed-outline"></ion-icon>
+      <input class="pas" type="password" id="password" name="password" placeholder="············"/>
+     
+    </div>
+  </div>
+  <!--<a href="index1.html">SSS</a>-->
+  <!--<button class="login" >Login </button>-->
+  <input type="submit" id='login' name="login_submit" value="Login"/>
+ 
+</div>
+<!-- partial -->
+
+
+  
+</body>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+  import { getDatabase } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyChFbRMFgjN00pXgURN9ybaZIpH6LlQi4M",
+    authDomain: "playkaro-371ea.firebaseapp.com",
+    databaseURL: "https://playkaro-371ea-default-rtdb.firebaseio.com",
+    projectId: "playkaro-371ea",
+    storageBucket: "playkaro-371ea.appspot.com",
+    messagingSenderId: "284036273783",
+    appId: "1:284036273783:web:ff323cfd1a6e3791d9d872"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database=getDatabase(app);
+  const auth=getAuth();
+ 
+
+
+  document.getElementById("login").addEventListener('click',(e)=>{
+    var email=document.getElementById('email').value;
+    var password=document.getElementById('password').value;
+
+    signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+   
+    window.location.replace("index1.html");
+
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+  });
+
+
+
+  })
+
+
+</script> 
+</html>
