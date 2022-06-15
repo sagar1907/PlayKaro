@@ -23,7 +23,7 @@ body {
   flex-direction: column;
   border-radius: 30px;
   box-shadow: 0 0 2em #e6e9f9;
-  gap: 2em;
+  gap: 1em;
   border-color: rgb(10, 8, 9);
   border-width: 10px;
   
@@ -105,7 +105,7 @@ body {
   font-size: 0.7em;
   color: #5e5e5e;
   gap: 14em;
-  padding-bottom: 20em;
+  padding-bottom: 5em;
 }
 .screen-1 .footer span {
   cursor: pointer;

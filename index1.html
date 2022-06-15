@@ -8,98 +8,184 @@
         <link rel="stylesheet" href="style.css">
         </head>
 <body>
-    <nav>
-        <ul>
-            <li class="brand"><img src="logo.png" alt="Spotify"> PlayKaro</li>
-            <li>Home</li>
-            <li>About</li>
-            <button class="buttton">Search</button>
-        </ul>
-    </nav>
-
-    <div class="container">
-        <div class="songList">
-            <h1 class="playkaro">PlayKaro - Play Your Favourite Music</h1>
-            <div class="songItemContainer">
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName">Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">05:28 <i id="0" class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName">Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">04:20 <i id="1" class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName">Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">05:45 <i id="2" class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName">Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">03:34 <i id="3" class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName">Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">04:34 <i id="4" class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName">Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">06:01 <i id="5" class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName">Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">03:50 <i id="6" class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName">Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">04:04 <i id="7" class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName">Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">04:39 <i id="8" class="far songItemPlay fa-play-circle"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName">Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">06:02 <i id="9" class="far songItemPlay fa-play-circle"></i> </span></span>
+    <div class="BaapPage">
+            <div class="HomePage" id="HomePage">
+        <nav>
+            <ul>
+                <li class="brand"><img src="logo.png" alt="Spotify"> PlayKaro</li>
+                <li>Home</li>
+                <li>About</li>
+                <button class="button" id="signout">Logout</button>
+            </ul>
+        </nav>
+    
+        <div class="container">
+            <div class="songList">
+                <h1 class="playkaro">PlayKaro - Play Your Favourite Music</h1>
+                <div class="songItemContainer">
+                    <div class="songItem">
+                        <img alt="1">
+                        <span class="songName">Let me Love You</span>
+                        <span class="songlistplay"><span class="timestamp">05:28 <i id="0" class="far songItemPlay fa-play-circle"></i> </span></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="1">
+                        <span class="songName">Let me Love You</span>
+                        <span class="songlistplay"><span class="timestamp">04:20 <i id="1" class="far songItemPlay fa-play-circle"></i> </span></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="1">
+                        <span class="songName">Let me Love You</span>
+                        <span class="songlistplay"><span class="timestamp">05:45 <i id="2" class="far songItemPlay fa-play-circle"></i> </span></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="1">
+                        <span class="songName">Let me Love You</span>
+                        <span class="songlistplay"><span class="timestamp">03:34 <i id="3" class="far songItemPlay fa-play-circle"></i> </span></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="1">
+                        <span class="songName">Let me Love You</span>
+                        <span class="songlistplay"><span class="timestamp">04:34 <i id="4" class="far songItemPlay fa-play-circle"></i> </span></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="1">
+                        <span class="songName">Let me Love You</span>
+                        <span class="songlistplay"><span class="timestamp">06:01 <i id="5" class="far songItemPlay fa-play-circle"></i> </span></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="1">
+                        <span class="songName">Let me Love You</span>
+                        <span class="songlistplay"><span class="timestamp">03:50 <i id="6" class="far songItemPlay fa-play-circle"></i> </span></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="1">
+                        <span class="songName">Let me Love You</span>
+                        <span class="songlistplay"><span class="timestamp">04:04 <i id="7" class="far songItemPlay fa-play-circle"></i> </span></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="1">
+                        <span class="songName">Let me Love You</span>
+                        <span class="songlistplay"><span class="timestamp">04:39 <i id="8" class="far songItemPlay fa-play-circle"></i> </span></span>
+                    </div>
+                    <div class="songItem">
+                        <img alt="1">
+                        <span class="songName">Let me Love You</span>
+                        <span class="songlistplay"><span class="timestamp">06:02 <i id="9" class="far songItemPlay fa-play-circle"></i> </span></span>
+                    </div>
                 </div>
             </div>
+            <div class="songBanner"></div>
         </div>
-        <div class="songBanner"></div>
+    
+        <div class="bottom">
+            <input type="range" name="range" class="myProgress" id="myProgressBar" min="0" value="0" max="100">
+            
+                <div class="icons">
+                    <!-- fontawesome icons -->
+                    <i class="fas fa-3x fa-step-backward" id="previous"></i>
+                    <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
+                    <i class="fas fa-3x fa-step-forward" id="next"></i> 
+                </div>
+                <div class="songInfo">
+                    <img src="playing.gif" width="42px" alt="" id="gif"> <span id="masterSongName" style="cursor: pointer;">Baarish Ki Jaaye</span>
+                </div>
+                
+                <div class="loopContainer">
+                    <button id="shuffleButton"class="Off">Shuffle</button>
+                    <button id="loopButton" class="Off">Loop</button>  
+                </div>
+
+
+            
+            
+        </div>
+      
     </div>
+    
 
-    <div class="bottom">
-        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
-        <div class="icons">
-            <!-- fontawesome icons -->
-            <i class="fas fa-3x fa-step-backward" id="previous"></i>
-            <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
-            <i class="fas fa-3x fa-step-forward" id="next"></i> 
+    <div class="SongPage" id="SongPage">
+        <button id="returnToHomePage">Back</button>
+        
+        
+        <div class="main">
+            <p id="logo"><i class="fa fa-music"></i>Music</p>
+          
+          <!--- left part --->
+           <div class="left">
+      
+            <!--- song img --->
+            <img id="track_image" src="covers/1.jpg">
+               <div class="volume">
+                  
+                  <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
+                  <input type="range" min="0" max="100" value="90" id="volume"> 
+                  <p id="volume_show">90</p> 
+               </div>
+      
+           </div>
+       
+      
+           <!--- right part --->
+             <div class="right">
+      
+              
+      
+             <!--- song title & artist name --->
+            <p id="masterSongName2" style="cursor: pointer;">Baarish Ki Jaaye.mp3</p>
+            
+      
+            <!--- middle part --->
+                 <div class="middle">
+                   <button  id="pre2"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+                   <button  ><i class="fa fa-play-circle" id="play" aria-hidden="true"></i></button>
+                   <button  id="next2"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+               </div>
+      
+             <!--- song duration part --->
+              <div class="duration">
+                 <input type="range" class="myProgress" min="0" max="100" value="0" id="myProgressBar2">
+              </div>
+                 
+            </div>
+      
+      
         </div>
-        <div class="songInfo">
-            <img src="playing.gif" width="42px" alt="" id="gif"> <span id="masterSongName">Baarish Ki Jaaye</span>
-        </div>
-        <h1 id="shuffleButton">d</h1>
     </div>
-  
-
-<!-- scroll top button  -->
-<a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
-
-<!-- loader  -->
-<div class="loader-container">
-    <img src="images/loader.gif" alt="">
 </div>
 
-    
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+    import { getDatabase } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
+  
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyChFbRMFgjN00pXgURN9ybaZIpH6LlQi4M",
+      authDomain: "playkaro-371ea.firebaseapp.com",
+      databaseURL: "https://playkaro-371ea-default-rtdb.firebaseio.com",
+      projectId: "playkaro-371ea",
+      storageBucket: "playkaro-371ea.appspot.com",
+      messagingSenderId: "284036273783",
+      appId: "1:284036273783:web:ff323cfd1a6e3791d9d872"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database=getDatabase(app);
+    const auth=getAuth();
+   
+    document.getElementById("signout").addEventListener('click',(e)=>{
+      auth.signOut();
+      window.location.replace("index.html");
+    });
+
+    </script>
+
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
 </body>
