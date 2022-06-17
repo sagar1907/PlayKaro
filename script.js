@@ -1,3 +1,4 @@
+
 console.log("Welcome to Spotify");
 
 // Initialize the Variables
@@ -16,6 +17,7 @@ let HomeOrSongPage=()=>{
         songPage.style.display="none";
     }
 }
+
 let musicvolume=document.getElementById('volume');
 let titleimage=document.getElementById('track_image');
 let returnToHomePage=document.getElementById('returnToHomePage');
@@ -33,7 +35,7 @@ let masterSongName = document.getElementById('masterSongName');
 document.getElementById('shuffleButton').style.color = "black";
 document.getElementById('shuffleButton').style.backgroundColor = "darkcyan";
 document.getElementById('loopButton').style.color = "black";
-        document.getElementById('loopButton').style.backgroundColor = "darkcyan";
+document.getElementById('loopButton').style.backgroundColor = "darkcyan";
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 let songs = [
     {songName: "Baarish ki Jaye", filePath: "songs/1.mp3", coverPath: "covers/1.jpg"},
@@ -64,14 +66,11 @@ songItems.forEach((element, i)=>{
     element.getElementsByClassName("songName")[0].innerText = songs[i].songName; 
 })
  
-
-masterPlay2.addEventListener('click',()=>{
+let masterPlay2Function=()=>{
     if(audioElement.paused || audioElement.currentTime<=0){
         audioElement.play();
         masterPlay.classList.remove('fa-play-circle');
         masterPlay.classList.add('fa-pause-circle');
-        console.log(masterPlay2);
-        console.log(masterPlay2.classList);
         masterPlay2.classList.remove('fa-play-circle');
         masterPlay2.classList.add('fa-pause-circle');
         gif.style.opacity = 1;
@@ -84,16 +83,21 @@ masterPlay2.addEventListener('click',()=>{
         masterPlay2.classList.remove('fa-pause-circle');
         masterPlay2.classList.add('fa-play-circle');
         gif.style.opacity = 0;
-    }})
+    }}
+
+masterPlay2.addEventListener('click',masterPlay2Function)
 
 // Handle play/pause click
-masterPlay.addEventListener('click', ()=>{
+
+let masterPlayFunction=()=>{
     if(audioElement.paused || audioElement.currentTime<=0){
         audioElement.play();
         masterPlay.classList.remove('fa-play-circle');
         masterPlay.classList.add('fa-pause-circle');
         masterPlay2.classList.remove('fa-play-circle');
         masterPlay2.classList.add('fa-pause-circle');
+        smallplaybutton.classList.remove('fa-play-circle');
+        smallplaybutton.classList.add('fa-pause-circle');
         gif.style.opacity = 1; 
         
     }
@@ -105,7 +109,8 @@ masterPlay.addEventListener('click', ()=>{
         masterPlay2.classList.add('fa-play-circle');
         gif.style.opacity = 0;
     }
-})
+}
+masterPlay.addEventListener('click',masterPlayFunction);
 
 audioElement.addEventListener("ended",()=>{
     if(loop===false){
@@ -151,8 +156,12 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         audioElement.currentTime = 0;
         audioElement.play();
         gif.style.opacity = 1;
-        masterPlay.classList.remove('fa-play-circle');
-        masterPlay.classList.add('fa-pause-circle');
+        masterSongName2.innerText = songs[songIndex].songName;
+        titleimage.src= songs[songIndex].coverPath;    
+        masterPlay2Function();
+        masterPlayFunction();
+        // masterPlay.classList.remove('fa-play-circle');
+        // masterPlay.classList.add('fa-pause-circle');
     })
 })
 
